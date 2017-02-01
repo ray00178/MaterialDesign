@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rayzhang.android.materialdesign.MainActivity">
+    <!-- 1.android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" 這是為了讓3個點圖示變亮色風格，如不這樣做則系統會預設用暗色風格 -->
+    <!-- 2.app:popupTheme="@style/ThemeOverlay.AppCompat.Light" 設定跳出選單為亮色風格 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?android:actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitle="Subtitle"
+        app:subtitleTextColor="@android:color/holo_orange_light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Title"
+        app:titleTextColor="@color/colorAccent">
+        <!-- 自定義控件，可以添加多個-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>
