@@ -28,4 +28,17 @@
             android:textColor="@android:color/white"
             android:textSize="14sp" />
     </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/mFabBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_dialog_info"
+        app:backgroundTint="@android:color/holo_blue_light"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@android:color/holo_red_light" />
 </RelativeLayout>
