@@ -11,6 +11,10 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppNoActionBarTheme">
+        </activity>
+        <activity
+            android:name=".CollapsingActivity"
+            android:theme="@style/AppNoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
