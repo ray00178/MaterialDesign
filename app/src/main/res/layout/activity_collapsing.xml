@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.rayzhang.android.materialdesign.CollapsingActivity">
+
+    <!-- fitsSystemWindows設置為true 表示將佈局延伸至statusBar-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/mAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <!--layout_scrollFlags 5種方式
+            1.scroll
+            2.enterAlways
+            3.enterAlwaysCollapsed
+            4.exitUntilCollapsed
+            5.snap -->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/mCollaspLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@android:color/holo_orange_light"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:statusBarScrim="@android:color/transparent">
+            <!-- collapseMode 3種方式
+                 1.none
+                 2.parallax 搭配layout_collapseParallaxMultiplier使用 值介於0~1之間
+                 3.pin -->
+            <ImageView
+                android:id="@+id/mImgView"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/twice_1"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5" />
+            <!-- ToolBar高度要設定 不然標題不會顯示 -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/mToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
+</android.support.design.widget.CoordinatorLayout>
