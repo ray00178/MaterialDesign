@@ -8,6 +8,7 @@
     tools:context="com.rayzhang.android.materialdesign.CollapsingActivity">
 
     <!-- fitsSystemWindows設置為true 表示將佈局延伸至statusBar-->
+    <!-- 上述方法須搭配 <item name="android:windowTranslucentStatus">true</item> 才會有效-->
     <android.support.design.widget.AppBarLayout
         android:id="@+id/mAppBarLayout"
         android:layout_width="match_parent"
