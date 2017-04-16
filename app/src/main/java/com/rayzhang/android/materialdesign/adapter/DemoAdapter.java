@@ -35,6 +35,14 @@ public class DemoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         int viewType = getItemViewType(position);
         if (viewType == NORMAL_ITEM) {
             ((DemoNView) holder).mTextView.setText(list.get(position));
+            if (onItemClickListener != null) {
+                ((DemoNView) holder).mTextView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onItemClickListener.onItemClick(v);
+                    }
+                });
+            }
         }
     }
 
@@ -56,4 +64,15 @@ public class DemoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             mTextView = (TextView) itemView.findViewById(R.id.mTextView);
         }
     }
+
+    public interface onItemClickListener {
+        void onItemClick(View view);
+    }
+
+    private onItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(onItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
 }

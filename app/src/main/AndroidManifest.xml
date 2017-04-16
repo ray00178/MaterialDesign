@@ -10,17 +10,16 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppNoActionBarTheme2">
+            android:theme="@style/AppNoActionBarTheme2"></activity>
+        <activity
+            android:name=".CollapsingActivity"
+            android:theme="@style/AppNoActionBarTheme" />
+        <activity android:name=".DialogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".CollapsingActivity"
-            android:theme="@style/AppNoActionBarTheme">
-
         </activity>
     </application>
 

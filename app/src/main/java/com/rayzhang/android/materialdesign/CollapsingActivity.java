@@ -1,5 +1,6 @@
 package com.rayzhang.android.materialdesign;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.rayzhang.android.materialdesign.adapter.DemoAdapter;
 
@@ -72,5 +74,12 @@ public class CollapsingActivity extends AppCompatActivity {
         }
         DemoAdapter adapter = new DemoAdapter(list);
         mRecyView.setAdapter(adapter);
+        adapter.setOnItemClickListener(new DemoAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(View view) {
+                Intent i = new Intent(CollapsingActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
