@@ -11,6 +11,7 @@ Directory
 * [2017-03-12---MATERIAL DESIGN – APPBARLAYOUT & COLLAPSINGTOOLBARLAYOUT](https://rayzhangweb.wordpress.com/2017/03/12/material-design-appbarlayout-collapsingtoolbarlayout-%E4%BD%BF%E7%94%A8/)
 * [2017-03-26---MATERIAL DESIGN – CARDVIEW](https://rayzhangweb.wordpress.com/2017/03/26/material-design-cardview-%E4%BD%BF%E7%94%A8/?frame-nonce=3803e6640f)
 * [2017-04-16---AlertDialig and DialogFragment](https://rayzhangweb.wordpress.com/2017/04/16/android-dialog-and-dialogfragment/)
+* [2017-04-30---ANDROID-佈局優化INCLUDE、MERGE、VIEWSTUB](https://rayzhangweb.wordpress.com/2017/04/30/android-%E4%BD%88%E5%B1%80%E5%84%AA%E5%8C%96include%E3%80%81merge%E3%80%81viewstub/)
 <br>
 
 Contact me
