@@ -10,11 +10,14 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppNoActionBarTheme2"></activity>
+            android:theme="@style/AppNoActionBarTheme2" />
         <activity
             android:name=".CollapsingActivity"
             android:theme="@style/AppNoActionBarTheme" />
-        <activity android:name=".DialogActivity">
+        <activity android:name=".DialogActivity"></activity>
+        <activity
+            android:name=".LayoutActivity"
+            android:theme="@style/AppNoActionBarTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

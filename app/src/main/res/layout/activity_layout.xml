@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rayzhang.android.materialdesign.LayoutActivity">
+
+    <!-- 1. android:id= '自行律定' (可有可無，會影響到取得時的id)
+         2. layout = '要載入的佈局名稱' -->
+    <include
+        android:id="@+id/mToolBarLayout"
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"></include>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Divider View"
+        android:textColor="@android:color/white" />
+
+    <include
+        android:id="@+id/mLinearLayout"
+        layout="@layout/include_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"></include>
+
+    <!-- 設定
+         android:layout_width="match_parent"
+         android:layout_height="150dp"
+         會去影響到要加載View的寬 高 -->
+    <ViewStub
+        android:id="@+id/mViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:inflatedId="@+id/mViewStub_Img"
+        android:layout="@layout/viewstub_img" />
+</LinearLayout>
