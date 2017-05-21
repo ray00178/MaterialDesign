@@ -10,13 +10,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppNoActionBarTheme2" />
-        <activity
-            android:name=".CollapsingActivity"
-            android:theme="@style/AppNoActionBarTheme" />
-        <activity android:name=".DialogActivity"></activity>
-        <activity
-            android:name=".LayoutActivity"
             android:theme="@style/AppNoActionBarTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +17,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CollapsingActivity"
+            android:theme="@style/AppNoActionBarTheme"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity
+            android:name=".LayoutActivity"
+            android:theme="@style/AppNoActionBarTheme2"></activity>
+        <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

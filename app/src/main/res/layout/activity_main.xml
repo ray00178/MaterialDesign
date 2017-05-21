@@ -42,9 +42,11 @@
         app:cardCornerRadius="5dp"
         app:cardElevation="10dp"
         app:cardMaxElevation="5dp"
-        app:cardPreventCornerOverlap="true">
+        app:cardPreventCornerOverlap="true"
+        app:contentPadding="10dp">
 
         <ImageView
+            android:id="@+id/mImgView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"

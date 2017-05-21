@@ -87,7 +87,7 @@ public class LayoutActivity extends AppCompatActivity {
             Log.d(TAG, "mImgView already load.");
         }*/
 
-        // 模擬延遲2秒 在載入
+        // 模擬延遲5秒 在載入
         Message message = Message.obtain();
         message.what = 100;
         mHandler.sendMessageDelayed(message, 5000);
