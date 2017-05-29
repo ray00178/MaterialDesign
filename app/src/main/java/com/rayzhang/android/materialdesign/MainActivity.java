@@ -3,7 +3,6 @@ package com.rayzhang.android.materialdesign;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -84,14 +83,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(MainActivity.this, "I'm FAB", Toast.LENGTH_SHORT).show();
-                //Intent i = new Intent(MainActivity.this, CollapsingActivity.class);
+                Intent i = new Intent(MainActivity.this, CollapsingActivity.class);
                 //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 //i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 //i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                //startActivity(i);
+                startActivity(i);
 
-                Rect localImgRect = new Rect();
+                /*Rect localImgRect = new Rect();
                 // 取得View，相對於Parent View的位置
                 mImgView.getLocalVisibleRect(localImgRect);
                 Log.d(TAG, "Image getLocalVisibleRect:" + localImgRect);
@@ -123,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 // 取得當前Activity的Window大小(DecorView)
                 Rect windowRect = new Rect();
                 mCardView.getWindowVisibleDisplayFrame(windowRect);
-                Log.d(TAG, "getWindowVisibleDisplayFrame:" + windowRect);
+                Log.d(TAG, "getWindowVisibleDisplayFrame:" + windowRect);*/
             }
         });
     }

@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.rayzhang.android.materialdesign.adapter.DemoAdapter;
+import com.rayzhang.android.materialdesign.adapter.itemdecoration.LinearItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +66,11 @@ public class CollapsingActivity extends AppCompatActivity {
         mRecyView.setHasFixedSize(true);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mRecyView.setLayoutManager(manager);
+        /**
+         * 設置RecycleView的Dicider
+         */
+        mRecyView.addItemDecoration(new LinearItemDecoration(10, Color.parseColor("#009900")));
+
         /**
          * 設置RecyclerView的Adapter
          */

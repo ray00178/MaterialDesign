@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.rayzhang.android.materialdesign.onboarding.OnboardingActivity$PlaceholderFragment">
-
+    <!---->
     <ImageView
         android:id="@+id/mImgView"
         android:layout_width="60dp"

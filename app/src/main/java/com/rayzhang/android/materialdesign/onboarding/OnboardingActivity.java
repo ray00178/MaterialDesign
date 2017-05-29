@@ -108,7 +108,7 @@ public class OnboardingActivity extends AppCompatActivity implements View.OnClic
 
     public static class PlaceholderFragment extends Fragment {
         private static final String ARG_SECTION_NUMBER = "section_number";
-        // 每頁的圖片
+        // 每頁圖片
         private int[] logos = {R.drawable.ic_twitter, R.drawable.ic_chrome, R.drawable.ic_android};
 
         public PlaceholderFragment() {
