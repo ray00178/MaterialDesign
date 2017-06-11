@@ -1,6 +1,5 @@
 package com.rayzhang.android.materialdesign;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -14,9 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.rayzhang.android.materialdesign.adapter.DemoAdapter;
-import com.rayzhang.android.materialdesign.adapter.itemdecoration.LinearItemDecoration;
+import com.rayzhang.android.materialdesign.adapter.itemdecoration.LinearSectionDecoration;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CollapsingActivity extends AppCompatActivity {
@@ -66,25 +66,39 @@ public class CollapsingActivity extends AppCompatActivity {
         mRecyView.setHasFixedSize(true);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mRecyView.setLayoutManager(manager);
-        /**
-         * 設置RecycleView的Dicider
-         */
-        mRecyView.addItemDecoration(new LinearItemDecoration(10, Color.parseColor("#009900")));
 
+        // 資料來源
+        final List<String> list = new ArrayList<>();
+        for (int i = 1, j = 100; i <= j; i++) {
+            list.add("" + i);
+        }
+        // 將List做分組排序
+        Collections.sort(list);
+        /**
+         * 設置RecycleView的Divider
+         */
+        //mRecyView.addItemDecoration(new LinearSectionDecoration(1, Color.argb(255, 0, 102, 255)));
+        /**
+         * 設置RecycleView的Divider(include section)
+         */
+        mRecyView.addItemDecoration(new LinearSectionDecoration(50, 1, Color.argb(255, 0, 102, 255),
+                new LinearSectionDecoration.LinearSectionCallback() {
+                    @Override
+                    public String getItemStr(int poisition) {
+                        // 回傳每個Item的第1個字
+                        return list.get(poisition).substring(0, 1);
+                    }
+                }));
         /**
          * 設置RecyclerView的Adapter
          */
-        List<String> list = new ArrayList<>();
-        for (int i = 1, j = 100; i <= j; i++) {
-            list.add("item:" + i);
-        }
         DemoAdapter adapter = new DemoAdapter(list);
         mRecyView.setAdapter(adapter);
         adapter.setOnItemClickListener(new DemoAdapter.onItemClickListener() {
             @Override
             public void onItemClick(View view) {
-                Intent i = new Intent(CollapsingActivity.this, MainActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(CollapsingActivity.this, MainActivity.class);
+                //startActivity(i);
             }
         });
     }
