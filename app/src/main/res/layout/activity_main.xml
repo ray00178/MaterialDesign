@@ -65,4 +65,13 @@
         app:fabSize="normal"
         app:pressedTranslationZ="12dp"
         app:rippleColor="@android:color/holo_red_light" />
+
+    <ImageView
+        android:id="@+id/mImgFacebook"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_toLeftOf="@+id/mFabBut"
+        android:src="@drawable/ic_facebook_45dp" />
 </RelativeLayout>

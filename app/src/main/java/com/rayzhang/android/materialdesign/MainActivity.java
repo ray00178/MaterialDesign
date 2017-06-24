@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.rayzhang.android.materialdesign.onboarding.OnboardingActivity;
@@ -37,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         // 設定toolBar的logo
         mToolBar.setLogo(R.drawable.ic_arrow_back_white_24dp);
         // 設定標題文字
-        mToolBar.setTitle("Hey");
+        mToolBar.setTitle("Title");
         // 設定標題文字顏色
         mToolBar.setTitleTextColor(Color.YELLOW);
         // 設定子標題文字
-        mToolBar.setSubtitle("Hi");
+        mToolBar.setSubtitle("Subtitle");
         // 設定子標題文字顏色
         mToolBar.setSubtitleTextColor(Color.GREEN);
         // 設定toolBar的actionMenu
@@ -68,18 +65,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final CardView mCardView = (CardView) findViewById(R.id.mCardView);
-        final ImageView mImgView = (ImageView) findViewById(R.id.mImgView);
-
-        mCardView.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.mCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // 導覽列
                 startActivity(new Intent(MainActivity.this, OnboardingActivity.class));
             }
         });
-        FloatingActionButton mFabBut = (FloatingActionButton) findViewById(R.id.mFabBut);
-        mFabBut.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.mFabBut).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(MainActivity.this, "I'm FAB", Toast.LENGTH_SHORT).show();
@@ -89,42 +82,47 @@ public class MainActivity extends AppCompatActivity {
                 //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 //i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(i);
-
-                /*Rect localImgRect = new Rect();
-                // 取得View，相對於Parent View的位置
-                mImgView.getLocalVisibleRect(localImgRect);
-                Log.d(TAG, "Image getLocalVisibleRect:" + localImgRect);
-                // 取得View在整個螢幕上的位置
-                Rect globaImgRect = new Rect();
-                mImgView.getGlobalVisibleRect(globaImgRect);
-                Log.d(TAG, "Image getGlobalVisibleRect:" + globaImgRect);
-
-                Log.d(TAG, String.format("Image left:%d top:%d right:%d bottom:%d",
-                        mImgView.getLeft(), mImgView.getTop(), mImgView.getRight(), mImgView.getBottom()));
-                // 取得X、Y軸(但是相對於Parent View)
-                Log.d(TAG, String.format("Image x:%.2f y:%.2f", mImgView.getX(), mImgView.getY()));
-                // 取得View本身的大小
-                Log.d(TAG, String.format("Image width:%d height:%d", mImgView.getWidth(), mImgView.getHeight()));
-
-
-                // 在屏幕上計算此View的坐標。 參數必須是兩個整數的數組。 該方法返回後，該數組包含該順序中的x和y位置。
-                int[] outLocationWindows = new int[2];
-                mCardView.getLocationInWindow(outLocationWindows);
-                for (int i = 0, j = outLocationWindows.length; i < j; i++) {
-                    Log.d(TAG, "CardView getLocationInWindow:" + outLocationWindows[i]);
-                }
-                // 在其窗口中計算此View的坐標。 參數必須是兩個整數的數組。 該方法返回後，該數組包含該順序中的x和y位置。
-                int[] outLocationScreen = new int[2];
-                mCardView.getLocationOnScreen(outLocationScreen);
-                for (int i = 0, j = outLocationWindows.length; i < j; i++) {
-                    Log.d(TAG, "CardView outLocationScreen:" + outLocationScreen[i]);
-                }
-                // 取得當前Activity的Window大小(DecorView)
-                Rect windowRect = new Rect();
-                mCardView.getWindowVisibleDisplayFrame(windowRect);
-                Log.d(TAG, "getWindowVisibleDisplayFrame:" + windowRect);*/
             }
         });
+        findViewById(R.id.mImgFacebook).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // facebook login
+                startActivity(new Intent(MainActivity.this, FacebookActivity.class));
+            }
+        });
+
+        /*final ImageView mImgView = (ImageView) findViewById(R.id.mImgView);
+        Rect localImgRect = new Rect();
+        // 取得View，相對於Parent View的位置
+        mImgView.getLocalVisibleRect(localImgRect);
+        Log.d(TAG, "Image getLocalVisibleRect:" + localImgRect);
+
+        // 取得View在整個螢幕上的位置
+        Rect globaImgRect = new Rect();
+        mImgView.getGlobalVisibleRect(globaImgRect);
+        Log.d(TAG, "Image getGlobalVisibleRect:" + globaImgRect);
+
+        // 取得X、Y軸(但是相對於Parent View)
+        Log.d(TAG, String.format(Locale.TAIWAN, "Image x:%.2f y:%.2f", mImgView.getX(), mImgView.getY()));
+
+        // 取得當前Activity的Window大小(DecorView)
+        Rect windowRect = new Rect();
+        mCardView.getWindowVisibleDisplayFrame(windowRect);
+        Log.d(TAG, "getWindowVisibleDisplayFrame:" + windowRect);
+
+        // 在屏幕上計算此View的坐標。 參數必須是兩個整數的數組。 該方法返回後，該數組包含該順序中的x和y位置。
+        int[] outLocationWindows = new int[2];
+        mCardView.getLocationInWindow(outLocationWindows);
+        for (int i = 0, j = outLocationWindows.length; i < j; i++) {
+            Log.d(TAG, "CardView getLocationInWindow:" + outLocationWindows[i]);
+        }
+        // 在其窗口中計算此View的坐標。 參數必須是兩個整數的數組。 該方法返回後，該數組包含該順序中的x和y位置。
+        int[] outLocationScreen = new int[2];
+        mCardView.getLocationOnScreen(outLocationScreen);
+        for (int i = 0, j = outLocationWindows.length; i < j; i++) {
+            Log.d(TAG, "CardView outLocationScreen:" + outLocationScreen[i]);
+        }*/
     }
 
     private void logStr(String str) {
