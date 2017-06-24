@@ -16,6 +16,7 @@ Directory
 * [2017-05-21---ANDROID-STEP BY STEP 教你做出MATERIAL DESIGN風格 導覽頁](https://rayzhangweb.wordpress.com/2017/05/21/android-step-by-step-%E6%95%99%E4%BD%A0%E5%81%9A%E5%87%BAmaterial-design%E9%A2%A8%E6%A0%BC-%E5%B0%8E%E8%A6%BD%E9%A0%81/)
 * [2017-05-29---ANDROID-簡單為RECYCLEVIEW添加分隔線吧](https://rayzhangweb.wordpress.com/2017/05/29/android-%E7%B0%A1%E5%96%AE%E7%82%BArecycleview%E6%B7%BB%E5%8A%A0%E5%88%86%E9%9A%94%E7%B7%9A%E5%90%A7/?preview_id=1505&preview_nonce=1f88f79184)
 * [2017-06-11---ANDROID-為RECYCLEVIEW添加分類群組](https://rayzhangweb.wordpress.com/2017/06/11/android-%E7%82%BArecycle%E6%B7%BB%E5%8A%A0%E5%88%86%E9%A1%9E%E7%BE%A4%E7%B5%84%E5%90%A7/?preview_id=1642&preview_nonce=a2063df513)
+* [2017-06-24---ANDROID 一步一步，教你用FACEBOOK SDK，實現登入](https://rayzhangweb.wordpress.com/2017/06/24/android-%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%EF%BC%8C%E6%95%99%E4%BD%A0%E7%94%A8facebook-sdk%EF%BC%8C%E5%AF%A6%E7%8F%BE%E7%99%BB%E5%85%A5/)
 <br>
 
 Contact me
