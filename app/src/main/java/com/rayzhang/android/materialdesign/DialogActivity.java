@@ -103,7 +103,7 @@ public class DialogActivity extends AppCompatActivity implements View.OnClickLis
         if (prev != null) {
             ft.remove(prev);
         }
-        ft.addToBackStack(null);
+        ft.addToBackStack(null).commit();
 
         // Create and show the dialog.
         MySelfDialog dialog = MySelfDialog.instance("離開此頁面");

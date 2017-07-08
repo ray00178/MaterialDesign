@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rayzhang.android.materialdesign">
-
+    // 網路權限(要添加)
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,7 +16,7 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-        <!-- FB Share ex:photo、video、webLink-->
+        <!-- FB Share ex:photo、video、webLink -->
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider300570297058014"
@@ -60,8 +60,8 @@
             android:name=".onboarding.OnboardingActivity"
             android:label="@string/title_activity_onboarding"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".FacebookActivity" />
+        <activity android:name=".itemhelper.ItemTouchHelperActivity"></activity>
     </application>
 
 </manifest>

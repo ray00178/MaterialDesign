@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.rayzhang.android.materialdesign.itemhelper.ItemTouchHelperActivity;
 import com.rayzhang.android.materialdesign.onboarding.OnboardingActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "action_item1", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_item2:
-                        Toast.makeText(MainActivity.this, "action_item2", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, ItemTouchHelperActivity.class));
                         break;
                 }
                 return true;

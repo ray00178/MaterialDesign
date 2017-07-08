@@ -20,6 +20,6 @@
 
     <item
         android:id="@+id/action_item2"
-        android:title="item_Two"
+        android:title="itemTouchHelper"
         app:showAsAction="never" />
 </menu>

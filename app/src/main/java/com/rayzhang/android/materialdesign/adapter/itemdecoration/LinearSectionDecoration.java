@@ -13,7 +13,7 @@ import android.view.View;
  */
 
 public class LinearSectionDecoration extends RecyclerView.ItemDecoration {
-    private static final String TAG = LinearItemDecoration.class.getSimpleName();
+    private static final String TAG = LinearSectionDecoration.class.getSimpleName();
     // 分類群組的大小
     private int sectionSize = 30;
     // 分隔線的大小
