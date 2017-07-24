@@ -61,7 +61,8 @@
             android:label="@string/title_activity_onboarding"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FacebookActivity" />
-        <activity android:name=".itemhelper.ItemTouchHelperActivity"></activity>
+        <activity android:name=".itemhelper.ItemTouchHelperActivity"/>
+        <activity android:name=".AsyncTaskActivity"/>
     </application>
 
 </manifest>

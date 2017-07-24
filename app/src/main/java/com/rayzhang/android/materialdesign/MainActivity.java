@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "delete", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_item1:
-                        Toast.makeText(MainActivity.this, "action_item1", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));
                         break;
                     case R.id.action_item2:
                         startActivity(new Intent(MainActivity.this, ItemTouchHelperActivity.class));
