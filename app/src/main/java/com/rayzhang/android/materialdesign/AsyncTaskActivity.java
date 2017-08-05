@@ -58,13 +58,21 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
                  */
                 //new DownloadAsyncTask().execute("https://i.ytimg.com/vi/dmRgNR3WbHc/maxresdefault.jpg",
                 //        "https://cdn.hk01.com/media/images/582792/xlarge/e152f34b18d92f4595f84b7ee016ccab.jpg");
-                DownloadAsyncTask task_1 = new DownloadAsyncTask();
+                DownloadAsyncTask task_1 = new DownloadAsyncTask(0);
+                DownloadAsyncTask task_2 = new DownloadAsyncTask(1);
                 // 剛初始化完成，尚未執行任務
                 Log.d(TAG, "TASK init:" + task_1.getStatus());
+
+                // 順序任務
+                //task_1.execute("https://i.ytimg.com/vi/dmRgNR3WbHc/maxresdefault.jpg");
+                //task_2.execute("https://cdn.hk01.com/media/images/582792/xlarge/e152f34b18d92f4595f84b7ee016ccab.jpg");
+                // 並行任務
                 task_1.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
-                        "https://i.ytimg.com/vi/dmRgNR3WbHc/maxresdefault.jpg",
+                        "https://i.ytimg.com/vi/dmRgNR3WbHc/maxresdefault.jpg");
+                task_2.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,
                         "https://cdn.hk01.com/media/images/582792/xlarge/e152f34b18d92f4595f84b7ee016ccab.jpg");
                 taskList.add(task_1);
+                taskList.add(task_2);
                 break;
             case R.id.mCancelBut:
                 // cancel : 調用 doInBackground() → onCancelled() → onCancelled(T t)
@@ -73,8 +81,8 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
                 if (taskList.size() > 0) {
                     for (DownloadAsyncTask task : taskList) {
                         task.cancel(false);
-                        taskList.remove(task);
                     }
+                    taskList.clear();
                 }
                 break;
         }
@@ -85,8 +93,8 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
         if (taskList.size() > 0) {
             for (DownloadAsyncTask task : taskList) {
                 task.cancel(true);
-                taskList.remove(task);
             }
+            taskList.clear();
         }
         super.onDestroy();
     }
@@ -100,6 +108,11 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
      * 2-3.第3個參數表示當任務完成後，要返回的型別
      */
     private class DownloadAsyncTask extends AsyncTask<String, Integer, Bitmap[]> {
+        private int tag = 0;
+
+        public DownloadAsyncTask(int tag) {
+            this.tag = tag;
+        }
 
         @Override
         protected void onPreExecute() {
@@ -112,7 +125,7 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
             Log.d(TAG, "doInBackground status:" + getStatus());
             // 先休眠3秒，在執行
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -180,8 +193,11 @@ public class AsyncTaskActivity extends AppCompatActivity implements View.OnClick
             super.onPostExecute(bitmaps);
             // 待任務都完成後，才會調用此方法
             mText_One.setText("onPostExecute bitmap:" + bitmaps.length + " status:" + getStatus() + " isCanceled:" + isCancelled());
-            mImgView.setImageBitmap(bitmaps[0]);
-            imageView_Two.setImageBitmap(bitmaps[1]);
+            if (tag == 0) {
+                mImgView.setImageBitmap(bitmaps[0]);
+            } else {
+                imageView_Two.setImageBitmap(bitmaps[0]);
+            }
         }
 
         @Override

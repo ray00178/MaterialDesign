@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.rayzhang.android.materialdesign.intentservice.IntentServiceActivity;
 import com.rayzhang.android.materialdesign.itemhelper.ItemTouchHelperActivity;
 import com.rayzhang.android.materialdesign.onboarding.OnboardingActivity;
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "favorite", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.delete:
-                        Toast.makeText(MainActivity.this, "delete", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, IntentServiceActivity.class));
                         break;
                     case R.id.action_item1:
                         startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));

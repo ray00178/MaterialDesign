@@ -4,6 +4,9 @@
     // 網路權限(要添加)
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,9 +63,21 @@
             android:name=".onboarding.OnboardingActivity"
             android:label="@string/title_activity_onboarding"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Facebook -->
         <activity android:name=".FacebookActivity" />
-        <activity android:name=".itemhelper.ItemTouchHelperActivity"/>
-        <activity android:name=".AsyncTaskActivity"/>
+
+        <!-- ItemTouchHelper -->
+        <activity android:name=".itemhelper.ItemTouchHelperActivity" />
+
+        <!-- AsyncTask -->
+        <activity android:name=".AsyncTaskActivity" />
+
+        <!-- IntentService -->
+        <activity android:name=".intentservice.IntentServiceActivity" />
+        <service
+            android:name=".intentservice.DownloadIntentService"
+            android:exported="false" />
     </application>
 
 </manifest>
