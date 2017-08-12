@@ -21,7 +21,7 @@ public class HandlerThreadActivity extends AppCompatActivity {
 
     private TextView mTextView;
     private ImageView mImgView;
-
+    // HandlerThread & Hanlder
     private HandlerThread downloadThread;
     private Handler downloadHandler;
     // 是否要定時更新
