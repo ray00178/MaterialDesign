@@ -15,11 +15,31 @@
 
     <item
         android:id="@+id/action_item1"
-        android:title="AsyncTask"
+        android:title="itemTouchHelper"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_item2"
-        android:title="itemTouchHelper"
+        android:title="Dialog"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item3"
+        android:title="OnBoarding"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item4"
+        android:title="AsyncTask"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item5"
+        android:title="IntentService"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item6"
+        android:title="HandlerThread"
         app:showAsAction="never" />
 </menu>

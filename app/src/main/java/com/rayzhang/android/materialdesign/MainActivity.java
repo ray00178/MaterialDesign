@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -54,13 +53,25 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "favorite", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.delete:
-                        startActivity(new Intent(MainActivity.this, IntentServiceActivity.class));
+                        Toast.makeText(MainActivity.this, "favorite", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_item1:
-                        startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));
+                        startActivity(new Intent(MainActivity.this, ItemTouchHelperActivity.class));
                         break;
                     case R.id.action_item2:
-                        startActivity(new Intent(MainActivity.this, ItemTouchHelperActivity.class));
+                        startActivity(new Intent(MainActivity.this, DialogActivity.class));
+                        break;
+                    case R.id.action_item3:
+                        startActivity(new Intent(MainActivity.this, OnboardingActivity.class));
+                        break;
+                    case R.id.action_item4:
+                        startActivity(new Intent(MainActivity.this, AsyncTaskActivity.class));
+                        break;
+                    case R.id.action_item5:
+                        startActivity(new Intent(MainActivity.this, IntentServiceActivity.class));
+                        break;
+                    case R.id.action_item6:
+                        startActivity(new Intent(MainActivity.this, HandlerThreadActivity.class));
                         break;
                 }
                 return true;
@@ -70,14 +81,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.mCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 導覽列
-                startActivity(new Intent(MainActivity.this, OnboardingActivity.class));
-            }
-        });
-        findViewById(R.id.mFabBut).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(MainActivity.this, "I'm FAB", Toast.LENGTH_SHORT).show();
+                // Collapsing
                 Intent i = new Intent(MainActivity.this, CollapsingActivity.class);
                 //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 //i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -86,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        findViewById(R.id.mImgFacebook).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.mFabBut).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 // facebook login
                 startActivity(new Intent(MainActivity.this, FacebookActivity.class));
             }
@@ -128,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void logStr(String str) {
-        Log.d(TAG, str);
+        //Log.d(TAG, str);
     }
 
     @Override

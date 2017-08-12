@@ -60,18 +60,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        android:src="@android:drawable/ic_dialog_info"
-        app:backgroundTint="@android:color/holo_blue_light"
+        android:src="@drawable/ic_facebook_45dp"
+        app:backgroundTint="@android:color/holo_orange_light"
         app:fabSize="normal"
         app:pressedTranslationZ="12dp"
         app:rippleColor="@android:color/holo_red_light" />
-
-    <ImageView
-        android:id="@+id/mImgFacebook"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        android:layout_toLeftOf="@+id/mFabBut"
-        android:src="@drawable/ic_facebook_45dp" />
 </RelativeLayout>
