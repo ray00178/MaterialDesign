@@ -19,7 +19,8 @@ Directory
 * [2017-06-24---ANDROID 一步一步，教你用FACEBOOK SDK，實現登入](https://rayzhangweb.wordpress.com/2017/06/24/android-%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%EF%BC%8C%E6%95%99%E4%BD%A0%E7%94%A8facebook-sdk%EF%BC%8C%E5%AF%A6%E7%8F%BE%E7%99%BB%E5%85%A5/)
 * [2017-07-08---ANDROID – ITEMTOUCHHELPER讓RECYCLEVIEW ITEM動起來吧!](https://rayzhangweb.wordpress.com/2017/07/08/android-itemtouchhelper%E8%AE%93recycleview-item%E5%8B%95%E8%B5%B7%E4%BE%86%E5%90%A7/)
 * [2017-07-27---ANDROID – 關於ASYNCTASK](https://rayzhangweb.wordpress.com/2017/07/27/android-%E9%97%9C%E6%96%BCasynctask/)
-* [2017-08-05---ANDROID – ANDROID – 關於INTENTSERVICE](https://rayzhangweb.wordpress.com/2017/08/05/android-%E9%97%9C%E6%96%BCintentservice/)
+* [2017-08-05---ANDROID – 關於INTENTSERVICE](https://rayzhangweb.wordpress.com/2017/08/05/android-%E9%97%9C%E6%96%BCintentservice/)
+* [2017-08-12---ANDROID – 關於HANDLERTHREAD](https://rayzhangweb.wordpress.com/2017/08/12/android-%E9%97%9C%E6%96%BChandlerthread/)
 <br>
 
 Contact me
