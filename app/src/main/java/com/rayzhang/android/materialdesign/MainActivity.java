@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_item6:
                         startActivity(new Intent(MainActivity.this, HandlerThreadActivity.class));
+                    case R.id.action_item7:
+                        startActivity(new Intent(MainActivity.this, ExecutorActivity.class));
                         break;
                 }
                 return true;

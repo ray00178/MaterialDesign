@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rayzhang.android.materialdesign.ExecutorActivity">
+
+    <Button
+        android:id="@+id/mFixBut"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="FixedThread"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mCacheBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:text="CacheThread"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/mFixBut"
+        app:layout_constraintLeft_toRightOf="@+id/mFixBut"
+        app:layout_constraintTop_toTopOf="@+id/mFixBut" />
+
+    <Button
+        android:id="@+id/mScheduleBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="ScheduleThread"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="@+id/mFixBut"
+        app:layout_constraintTop_toBottomOf="@+id/mFixBut" />
+
+    <Button
+        android:id="@+id/mSingleBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:text="SingleThread"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/mScheduleBut"
+        app:layout_constraintLeft_toRightOf="@+id/mScheduleBut"
+        app:layout_constraintTop_toTopOf="@+id/mScheduleBut"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

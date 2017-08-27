@@ -79,7 +79,8 @@
             android:name=".intentservice.DownloadIntentService"
             android:exported="false" />
 
-        <activity android:name=".HandlerThreadActivity"></activity>
+        <activity android:name=".HandlerThreadActivity" />
+        <activity android:name=".ExecutorActivity"></activity>
     </application>
 
 </manifest>

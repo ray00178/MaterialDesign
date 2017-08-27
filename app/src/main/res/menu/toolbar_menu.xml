@@ -42,4 +42,9 @@
         android:id="@+id/action_item6"
         android:title="HandlerThread"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item7"
+        android:title="ThreadPool"
+        app:showAsAction="never" />
 </menu>
