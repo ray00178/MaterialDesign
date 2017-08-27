@@ -21,7 +21,7 @@ Directory
 * [2017-07-27---ANDROID – 關於AsyncTask](https://rayzhangweb.wordpress.com/2017/07/27/android-%E9%97%9C%E6%96%BCasynctask/)
 * [2017-08-05---ANDROID – 關於IntentService](https://rayzhangweb.wordpress.com/2017/08/05/android-%E9%97%9C%E6%96%BCintentservice/)
 * [2017-08-12---ANDROID – 關於HandlerThread](https://rayzhangweb.wordpress.com/2017/08/12/android-%E9%97%9C%E6%96%BChandlerthread/)
-* [2017-08-12---ANDROID – 關於ThreadPoolExecutor](https://rayzhangweb.wordpress.com/2017/08/27/android-%E9%97%9C%E6%96%BC%E3%80%8Cthreadpoolexecutor%E3%80%8D/)
+* [2017-08-27---ANDROID – 關於ThreadPoolExecutor](https://rayzhangweb.wordpress.com/2017/08/27/android-%E9%97%9C%E6%96%BC%E3%80%8Cthreadpoolexecutor%E3%80%8D/)
 <br>
 
 Contact me
