@@ -75,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_item7:
                         startActivity(new Intent(MainActivity.this, ExecutorActivity.class));
                         break;
+                    case R.id.action_item8:
+                        startActivity(new Intent(MainActivity.this, CompressActivity.class));
+                        break;
                 }
                 return true;
             }

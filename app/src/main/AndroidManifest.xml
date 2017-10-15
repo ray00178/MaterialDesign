@@ -80,7 +80,11 @@
             android:exported="false" />
 
         <activity android:name=".HandlerThreadActivity" />
-        <activity android:name=".ExecutorActivity"></activity>
+        <activity android:name=".ExecutorActivity" />
+        <activity
+            android:name=".CompressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoActionBarTheme2" />
     </application>
 
 </manifest>

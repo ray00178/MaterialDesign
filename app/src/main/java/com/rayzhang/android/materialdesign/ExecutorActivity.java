@@ -49,7 +49,6 @@ public class ExecutorActivity extends AppCompatActivity {
                 singleThread();
             }
         });
-
     }
 
     private void fixedThread() {

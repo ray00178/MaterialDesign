@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTextBeforeView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/mImgBeforeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/holo_green_light"
+        android:maxHeight="480dp"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/mTextAfterView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/mImgAfterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/holo_orange_light"
+        android:maxHeight="480dp"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mMatrixBut"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Matrix"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mRGBBut"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="RGB_565"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mSampleBut"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="InSampleSize"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</LinearLayout>
