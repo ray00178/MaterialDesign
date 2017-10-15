@@ -23,6 +23,7 @@ Directory
 * [2017-08-12---ANDROID – 關於HandlerThread](https://rayzhangweb.wordpress.com/2017/08/12/android-%E9%97%9C%E6%96%BChandlerthread/)
 * [2017-08-27---ANDROID – 關於ThreadPoolExecutor](https://rayzhangweb.wordpress.com/2017/08/27/android-%E9%97%9C%E6%96%BC%E3%80%8Cthreadpoolexecutor%E3%80%8D/)
 * [2017-09-11---ANDROID – BITMAP之佔用記憶體大小](https://rayzhangweb.wordpress.com/2017/09/11/android-bitmap%E4%B9%8B%E4%BD%94%E7%94%A8%E8%A8%98%E6%86%B6%E9%AB%94%E5%A4%A7%E5%B0%8F/)
+* [2017-09-11---ANDROID – Bitmap with Compress](https://rayzhangweb.wordpress.com/2017/10/15/android-bitmap-with-compress/)
 <br>
 
 Contact me
